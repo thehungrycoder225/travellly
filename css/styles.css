@@ -1,0 +1,199 @@
+@font-face {
+  src: url("fonts/NoirStd-Regular.ttf");
+  font-family: "Noir";
+}
+
+@font-face {
+  src: url("fonts/Odachi\ 400.otf");
+  font-family: "Odachi";
+}
+
+/* Global */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Noir", sans-serif;
+}
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+p,
+li {
+  font-size: 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: azure;
+}
+
+button {
+  background-color: #131c27;
+  border: none;
+  border-radius: 0.5rem;
+  color: azure;
+  cursor: pointer;
+  padding: 2rem 6rem;
+  box-shadow: black 1 1 1;
+  transition: background ease-in 0.5s;
+}
+button:hover {
+  transition: background ease-in-out 0.5s;
+  background-color: #254872;
+}
+
+/* Nav Section With Hero */
+
+.main-header {
+  background-color: #131c27;
+}
+
+nav {
+  min-height: 10vh;
+  padding: 1rem;
+  color: azure;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Odachi", sans-serif;
+}
+
+.hero {
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.3)),
+    url("../img/landing-page.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+}
+
+.hero h3 {
+  padding: 5rem;
+}
+
+/* locations */
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.3)),
+    url("../img/new-york-page.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-header {
+  margin: auto;
+  width: 90%;
+}
+
+.locations-header h2 {
+  padding: 1rem 0;
+  text-decoration: underline;
+  text-decoration-color: #131c27;
+  color: #131c27;
+}
+
+.locations-header h3 {
+  padding: 2rem 0;
+  color: #131c27;
+}
+
+.cloud {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+}
+
+.cloud-moving-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+.cloud-moving-2 {
+  animation: cloudAnimation 3.5s infinite alternate-reverse ease-in-out 1s;
+  top: 20%;
+  z-index: -1;
+}
+/* animcations */
+@keyframes cloudAnimation {
+  0% {
+    transform: translate(10%, -10%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 1rem;
+    pointer-events: none;
+  }
+  .cloud {
+    height: 40rem;
+  }
+  .cloud-moving-1 {
+    z-index: -1;
+  }
+
+  .cloud-moving-2 {
+    z-index: -2;
+    top: 10%;
+  }
+  .locations-header h3 {
+    background-color: rgba(19, 28, 39, 0.8);
+    -webkit-text-fill-color: azure;
+  }
+}
