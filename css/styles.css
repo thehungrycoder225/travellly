@@ -35,7 +35,7 @@ h3 {
 
 h4,
 h5 {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
 }
 
 p,
@@ -48,30 +48,32 @@ a {
 }
 
 button {
-  background-color: #131c27;
+  background-color: #015668;
   border: none;
   border-radius: 0.5rem;
   color: azure;
   cursor: pointer;
-  padding: 2rem 6rem;
-  box-shadow: black 1 1 1;
+  padding: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.233);
   transition: background ease-in 0.5s;
 }
 button:hover {
   transition: background ease-in-out 0.5s;
-  background-color: #254872;
+  background-color: #ffd369;
+  color: #263f44;
 }
 
 /* Nav Section With Hero */
 
 .main-header {
-  background-color: #131c27;
+  background-color: #015668;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 nav {
-  min-height: 10vh;
   padding: 1rem;
-  color: azure;
   display: flex;
   width: 90%;
   margin: auto;
@@ -86,13 +88,31 @@ nav ul {
   justify-content: space-around;
   align-items: center;
 }
+li a {
+  color: azure;
+  transition: 1s ease-in-out;
+}
 
+li a:hover {
+  color: #ffd369;
+  transition: 0.5s ease-in-out;
+}
 #logo {
   flex: 2 1 40rem;
   font-family: "Odachi", sans-serif;
+  color: #fff1cf;
+}
+#logo a {
+  transition: 0.5s ease-in-out;
 }
 
-.hero {
+#logo:hover a {
+  color: #ffd369;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#hero {
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.3)),
     url("../img/landing-page.jpg");
@@ -108,7 +128,7 @@ nav ul {
   text-align: center;
 }
 
-.hero h3 {
+#hero h3 {
   padding: 5rem;
 }
 
@@ -134,13 +154,13 @@ nav ul {
 .locations-header h2 {
   padding: 1rem 0;
   text-decoration: underline;
-  text-decoration-color: #131c27;
-  color: #131c27;
+  text-decoration-color: #263f44;
+  color: #ffd369;
 }
 
 .locations-header h3 {
   padding: 2rem 0;
-  color: #131c27;
+  color: #fff1cf;
 }
 
 .cloud {
@@ -157,7 +177,132 @@ nav ul {
   top: 20%;
   z-index: -1;
 }
-/* animcations */
+
+/* benefits */
+.benefits-header {
+  background-color: #263f44;
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: azure;
+}
+
+.benefits-header h3 {
+  padding: 1rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5), 0px 20px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card-icon {
+  background-color: #015668;
+}
+
+.card h4,
+p {
+  padding: 1rem;
+}
+.cards img {
+  max-width: 15%;
+  margin: 2rem;
+}
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)),
+    url("../img/contact-mountain.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  background: rgba(38, 63, 68, 0.507);
+  width: 40%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 35vh;
+  margin: 2rem 5rem;
+  color: #ffd369;
+  text-align: center;
+}
+
+.form-header {
+  padding: 2rem;
+  text-align: center;
+}
+
+.name-form,
+.email-form {
+  padding: 1rem;
+  text-align: center;
+}
+
+form label {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+form input {
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+form button {
+  margin: auto;
+  margin: 1rem 0;
+}
+/* Footer */
+footer {
+  background: #015668;
+  color: azure;
+}
+
+.footer-wrapper {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 5vh;
+}
+footer h5 {
+  flex: 1 1 40rem;
+  font-family: "Odachi", sans-serif;
+  color: #ffd369;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+/* animations */
 @keyframes cloudAnimation {
   0% {
     transform: translate(10%, -10%);
@@ -193,7 +338,15 @@ nav ul {
     top: 10%;
   }
   .locations-header h3 {
+    text-align: center;
     background-color: rgba(19, 28, 39, 0.8);
     -webkit-text-fill-color: azure;
+  }
+  footer {
+    text-align: center;
+  }
+
+  footer h5 {
+    padding: 3rem;
   }
 }

@@ -12,15 +12,15 @@
   <body>
     <header class="main-header">
       <nav>
-        <h1 id="logo">Travelly</h1>
+        <h1 id="logo"><a href="#hero">Travelly</a></h1>
         <ul>
           <li><a href="#locations">Locations</a></li>
           <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
     </header>
-    <section class="hero">
+    <section id="hero">
       <h2>Travel Beyond Limits</h2>
       <h3>Start you world adventure at and affordable price</h3>
       <button>Book Now</button>
@@ -34,5 +34,87 @@
         <img class="cloud cloud-moving-2" src="img/cloud.png" />
       </header>
     </section>
+    <!-- benefits section -->
+    <section id="benefits">
+      <header class="benefits-header">
+        <h2>The Perfect Travel</h2>
+        <h3>
+          Basta yun
+        </h3>
+      </header>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">
+            <img src="icons/route-solid.svg" alt="" />
+          </div>
+          <h4>Travel</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eos
+            enim doloribus quae reprehenderit eaque repellendus consequatur quo
+            temporibus, harum, dolores illo? Ex dolores similique placeat
+            provident quo praesentium cumque.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="icons/bed-solid.svg" alt="" />
+          </div>
+          <h4>Hotels</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            possimus maxime repudiandae esse, blanditiis officia delectus
+            cupiditate quas eum. Velit minus rem suscipit officia doloremque
+            laboriosam odio vel facere perspiciatis.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="icons/plane-departure-solid.svg" alt="" />
+          </div>
+          <h4>Plane</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque, consectetur pariatur. Facilis excepturi rerum nobis,
+            voluptas voluptatum aliquid natus nam, sunt reiciendis porro numquam
+            dignissimos earum ipsam molestias nihil a!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="form-wrapper">
+        <header class="form-header">
+          <h2>Contact Us</h2>
+        </header>
+        <form action="https://formspree.io/xnqbjwdp" method="POST">
+          <div class="name-form">
+            <label for="name">Name</label><br />
+            <input type="text" name="name" required />
+          </div>
+          <div class="email-form">
+            <label for="_replyto">Email</label><br />
+            <input type="email" name="_replyto" />
+          </div>
+          <button value="Send" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-wrapper">
+        <h5>The Hungrycoder &copy; 2020</h5>
+        <ul>
+          <li>
+            <a href=""><img src="icons/twitter.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="icons/youtube.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="icons/instagram.svg" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
